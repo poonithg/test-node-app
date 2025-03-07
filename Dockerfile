@@ -1,5 +1,7 @@
-## Use an official Node.js runtime as the base image
+# Use an official Node.js runtime as the base image
 FROM node:18-alpine
+
+RUN mkdir /app
 
 # Set the working directory in the container
 WORKDIR /app
@@ -7,6 +9,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
+RUN ls -l
 # Install dependencies
 RUN npm install
 
