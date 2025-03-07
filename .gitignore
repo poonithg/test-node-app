@@ -1,4 +1,4 @@
 *
 !Dockerfile
-!packages.json
+!package*.json
 !index.js
